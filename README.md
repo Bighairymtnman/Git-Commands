@@ -52,7 +52,7 @@
    git add .
    ```
    ```bash
-   git commit -m "Initial commit of BasicCalculator"
+   git commit -m "Initial commit of ProjectName"
    ```
 
 3. Configure remote:
