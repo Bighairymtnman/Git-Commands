@@ -63,7 +63,7 @@
    git remote -v
    ```
    ```bash
-   git remote set-url origin https://github.com/Bighairymtnman/BasicCalculator.git
+   git remote set-url origin https://github.com/YourUsername/your-repository.git
    ```
 
 4. Push and update branches:
@@ -101,12 +101,12 @@
 
 3. Clone the repository
    ```bash
-   git clone https://github.com/username/repository.git
+   git clone https://github.com/YourUsername/your-repository.git
    ```
 
 4. Enter the project directory
    ```bash
-   cd repository-name
+   cd your-repository
    ```
 
 
