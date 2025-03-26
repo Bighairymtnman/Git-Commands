@@ -17,3 +17,20 @@ Commands to add a new repository on GitHub:
 
 6. Push the changes to GitHub (if this is the first push, use master or main):
    git push -u origin master  # Or 'main' if your GitHub repo uses the main branch
+
+
+
+
+Commands to force local files to replace the repo files:
+cd C:\Users\amnic\OneDrive\Desktop\Coding\Git\ProjectName
+git init
+git add .
+git commit -m "Initial commit of BasicCalculator"
+git branch --unset-upstream
+git remote -v
+git remote set-url origin https://github.com/Bighairymtnman/BasicCalculator.git
+git push -u origin master
+git branch -m master main
+git fetch origin
+git push -f origin main
+git push origin --delete master
