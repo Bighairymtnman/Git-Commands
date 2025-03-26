@@ -110,3 +110,34 @@
    ```
 
 
+
+
+
+## Cleaning Repository History
+
+1. Navigate to repository:
+   ```bash
+   cd /path/to/your/project
+   ```
+
+2. Create backup branch:
+   ```bash
+   git checkout -b backup-main
+   ```
+
+3. Return to primary branch:
+   ```bash
+   git checkout master  # or 'main' depending on your branch name
+   ```
+
+4. Clean repository history:
+   ```bash
+   git filter-branch --force --index-filter "git rm --cached --ignore-unmatch PATH-TO-FILE" --prune-empty --tag-name-filter cat -- --all
+   ```
+
+5. Force push changes:
+   ```bash
+   git push origin --force --all
+   ```
+
+This process rewrites repository history to remove sensitive information from previous commits while preserving current code.
