@@ -163,3 +163,23 @@ This process rewrites repository history to remove sensitive information from pr
    ```
 
 This process synchronizes repositories when working across multiple machines and resolves branch naming conflicts.
+
+
+
+
+## Removing Files from Repository
+
+1. Remove file and stage deletion:
+   ```bash
+   git rm filename
+   ```
+
+2. Commit the removal:
+   ```bash
+   git commit -m "Remove file"
+   ```
+
+3. Push changes to remote:
+   ```bash
+   git push origin main  # or master depending on branch name
+   ```
