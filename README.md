@@ -141,3 +141,26 @@
    ```
 
 This process rewrites repository history to remove sensitive information from previous commits while preserving current code.
+
+
+
+
+## Resolving Main/Master Branch Conflicts
+
+1. Rename local branch to main:
+   ```bash
+   git branch -M main
+   ```
+
+2. Pull remote changes with unrelated histories:
+   ```bash
+   git pull origin main --allow-unrelated-histories
+   ```
+
+3. Push changes to main branch:
+   ```bash
+   git push -u origin main
+   ```
+
+This process synchronizes repositories when working across multiple machines and resolves branch naming conflicts.
+
