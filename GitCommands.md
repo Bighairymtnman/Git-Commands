@@ -1,7 +1,5 @@
 # Git Commands Reference
 
-
-
 ## Adding a New Repository to GitHub
 
 1. Navigate to project folder:
@@ -33,9 +31,6 @@
    ```bash
    git push -u origin master  # Or 'main' if your GitHub repo uses main branch
    ```
-
-
-
 
 ## Force Local Files to Replace Repository Files
 
@@ -83,10 +78,6 @@
    git push origin --delete master
    ```
 
-
-
-
-
 ## Cloning GitHub Repository
 
 1. Get the HTTPS URL from GitHub repository
@@ -108,10 +99,6 @@
    ```bash
    cd your-repository
    ```
-
-
-
-
 
 ## Cleaning Repository History
 
@@ -142,9 +129,6 @@
 
 This process rewrites repository history to remove sensitive information from previous commits while preserving current code.
 
-
-
-
 ## Resolving Main/Master Branch Conflicts
 
 1. Rename local branch to main:
@@ -164,9 +148,6 @@ This process rewrites repository history to remove sensitive information from pr
 
 This process synchronizes repositories when working across multiple machines and resolves branch naming conflicts.
 
-
-
-
 ## Removing Files from Repository
 
 1. Remove file and stage deletion:
@@ -183,37 +164,6 @@ This process synchronizes repositories when working across multiple machines and
    ```bash
    git push origin main  # or master depending on branch name
    ```
-
-
-
-
-
-## Managing File Contents
-
-1. Create backup of original files (optional):
-   ```bash
-   cp file1.md file1_backup.md
-   cp file2.md file2_backup.md
-   ```
-
-2. Edit files with new content
-
-3. Stage and commit changes:
-   ```bash
-   git add .
-   git commit -m "Reorganized file contents"
-   ```
-
-4. Push to remote:
-   ```bash
-   git push origin master
-   ```
-
-
-
-
-
-[Previous content remains exactly the same until the end...]
 
 ## Managing File Contents
 
@@ -257,3 +207,32 @@ This process synchronizes repositories when working across multiple machines and
    ```bash
    git pull --rebase origin main
    ```
+
+## Handling Vim Editor in Git
+
+1. When Vim appears (usually during merge operations):
+   - You'll see a text editor interface with merge message
+   - Cursor will be at the top of the file
+
+2. Basic Vim commands for editing:
+   ```bash
+   i           # Enter insert mode (allows typing)
+   ```
+   ```bash
+   Esc        # Exit insert mode
+   ```
+   ```bash
+   :wq        # Save and exit (write and quit)
+   ```
+   ```bash
+   :q!        # Exit without saving (quit without write)
+   ```
+
+3. Common workflow:
+   - Press 'i' to enter insert mode
+   - Type your merge message
+   - Press 'Esc' to exit insert mode
+   - Type ':wq' and press Enter to save and exit
+
+This process handles the Vim editor that appears during Git merge operations or when Git needs a detailed commit message.
+
