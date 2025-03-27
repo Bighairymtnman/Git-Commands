@@ -17,6 +17,7 @@ This guide covers essential Git operations for daily use, including:
 - Pushing updates to GitHub
 - Managing file contents
 - Removing files from repositories
+- Pulling changes from repositories
 
 ### Branch Management
 - Handling main/master branch conflicts
@@ -28,10 +29,6 @@ This guide covers essential Git operations for daily use, including:
 - Managing sensitive information
 - Backup procedures
 - File organization
-
-
-
-
 
 ## Advanced Commands (AdvancedGitCommands.md)
 
@@ -75,4 +72,3 @@ Feel free to submit issues and enhancement requests!
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
