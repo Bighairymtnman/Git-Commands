@@ -1,166 +1,38 @@
-# Git Commands Reference
+1. Basic Commands
 
+git init — Initialize a new Git repository.
+git clone <repository-url> — Clone an existing repository.
+git status — Show the status of files (untracked, modified, etc.).
+git add <file> — Add a specific file to staging.
+git add . — Add all files in the current directory to staging.
+git commit -m "message" — Commit changes with a message.
+git push — Push commits to the remote repository.
+git pull — Pull updates from the remote repository.
 
+2. Branching & Merging
 
-## Adding a New Repository to GitHub
+git branch — List all branches.
+git branch <branch-name> — Create a new branch.
+git checkout <branch-name> — Switch to another branch.
+git checkout -b <branch-name> — Create and switch to a new branch.
+git merge <branch-name> — Merge a branch into the current branch.
 
-1. Navigate to project folder:
-   ```bash
-   cd /path/to/your/project
-   ```
+3. File Management
 
-2. Initialize Git repository:
-   ```bash
-   git init
-   ```
+git mv <old-filename> <new-filename> — Rename a file.
+git rm <file> — Remove a file from the staging area (and repository).
+git reset <file> — Unstage a file.
+git log — View the commit history.
 
-3. Add remote repository:
-   ```bash
-   git remote add origin https://github.com/YourUsername/your-repository.git
-   ```
+4. Advanced Operations
 
-4. Add files to staging:
-   ```bash
-   git add .
-   ```
+git reset --hard — Reset the repository to the last commit (be careful, as this deletes uncommitted changes).
+git rebase <branch> — Rebase your current branch onto another.
+git stash — Temporarily save changes that aren't ready to be committed.
+git stash pop — Retrieve changes that were stashed.
+git remote add origin <url> — Set the remote repository.
 
-5. Commit changes:
-   ```bash
-   git commit -m "Initial commit message"
-   ```
+5. Tagging
 
-6. Push to GitHub:
-   ```bash
-   git push -u origin master  # Or 'main' if your GitHub repo uses main branch
-   ```
-
-
-
-
-## Force Local Files to Replace Repository Files
-
-1. Navigate to project:
-   ```bash
-   cd C:\Users\amnic\OneDrive\Desktop\Coding\Git\ProjectName
-   ```
-
-2. Initialize and stage:
-   ```bash
-   git init
-   ```
-   ```bash
-   git add .
-   ```
-   ```bash
-   git commit -m "Initial commit of ProjectName"
-   ```
-
-3. Configure remote:
-   ```bash
-   git branch --unset-upstream
-   ```
-   ```bash
-   git remote -v
-   ```
-   ```bash
-   git remote set-url origin https://github.com/YourUsername/your-repository.git
-   ```
-
-4. Push and update branches:
-   ```bash
-   git push -u origin master
-   ```
-   ```bash
-   git branch -m master main
-   ```
-   ```bash
-   git fetch origin
-   ```
-   ```bash
-   git push -f origin main
-   ```
-   ```bash
-   git push origin --delete master
-   ```
-
-
-
-
-
-## Cloning GitHub Repository
-
-1. Get the HTTPS URL from GitHub repository
-   - Go to repository on GitHub.com
-   - Click green "Code" button
-   - Copy the HTTPS URL
-
-2. Navigate to desired directory
-   ```bash
-   cd your/desired/directory
-   ```
-
-3. Clone the repository
-   ```bash
-   git clone https://github.com/YourUsername/your-repository.git
-   ```
-
-4. Enter the project directory
-   ```bash
-   cd your-repository
-   ```
-
-
-
-
-
-## Cleaning Repository History
-
-1. Navigate to repository:
-   ```bash
-   cd /path/to/your/project
-   ```
-
-2. Create backup branch:
-   ```bash
-   git checkout -b backup-main
-   ```
-
-3. Return to primary branch:
-   ```bash
-   git checkout master  # or 'main' depending on your branch name
-   ```
-
-4. Clean repository history:
-   ```bash
-   git filter-branch --force --index-filter "git rm --cached --ignore-unmatch PATH-TO-FILE" --prune-empty --tag-name-filter cat -- --all
-   ```
-
-5. Force push changes:
-   ```bash
-   git push origin --force --all
-   ```
-
-This process rewrites repository history to remove sensitive information from previous commits while preserving current code.
-
-
-
-
-## Resolving Main/Master Branch Conflicts
-
-1. Rename local branch to main:
-   ```bash
-   git branch -M main
-   ```
-
-2. Pull remote changes with unrelated histories:
-   ```bash
-   git pull origin main --allow-unrelated-histories
-   ```
-
-3. Push changes to main branch:
-   ```bash
-   git push -u origin main
-   ```
-
-This process synchronizes repositories when working across multiple machines and resolves branch naming conflicts.
-
+git tag <tag-name> — Create a tag.
+git tag -a <tag-name> -m "message" — Create an annotated tag.
