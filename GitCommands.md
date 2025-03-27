@@ -208,3 +208,52 @@ This process synchronizes repositories when working across multiple machines and
    ```bash
    git push origin master
    ```
+
+
+
+
+
+[Previous content remains exactly the same until the end...]
+
+## Managing File Contents
+
+1. Create backup of original files (optional):
+   ```bash
+   cp file1.md file1_backup.md
+   cp file2.md file2_backup.md
+   ```
+
+2. Edit files with new content
+
+3. Stage and commit changes:
+   ```bash
+   git add .
+   git commit -m "Reorganized file contents"
+   ```
+
+4. Push to remote:
+   ```bash
+   git push origin master
+   ```
+
+## Pulling Changes from Repository
+
+1. Check remote repository status:
+   ```bash
+   git remote -v
+   ```
+
+2. Fetch latest changes:
+   ```bash
+   git fetch origin
+   ```
+
+3. Pull changes from remote:
+   ```bash
+   git pull origin main
+   ```
+
+4. Pull with specific options:
+   ```bash
+   git pull --rebase origin main
+   ```
